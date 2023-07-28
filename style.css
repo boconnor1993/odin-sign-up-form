@@ -1,0 +1,69 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --color-bg: #F6F4F7;
+    --color-2: #88C55C;
+    --color-3: #E8652D;
+    --color-4: #80BFCC;
+    --color-5: #858E9B;
+    --color-6: #2B83A7;
+    --heading-bold: 550;
+    --heading-size: 36px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    /* border: solid;
+    border-color: red;
+    background-color: yellow; */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-panel {
+    /* background-color: var(--color-6); */
+    background-image: url('bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-panel {
+    background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+    display: flex;
+    flex-direction: row;
+    margin-top: 30%;
+    padding: 40px 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.brand-name {
+    font-size: var(--heading-size);
+    font-weight: var(--heading-bold);
+    color: var(--color-bg);
+}
+
+.right-panel {
+    flex-grow: 1;
+    background-color: var(--color-bg);
+}
