@@ -1,4 +1,5 @@
 :root {
+    font-size: 15px; /* base font size */
     font-family: Arial, Helvetica, sans-serif;
     --color-bg: #F6F4F7;
     --color-2: #88C55C;
@@ -7,7 +8,10 @@
     --color-5: #858E9B;
     --color-6: #2B83A7;
     --heading-bold: 550;
-    --heading-size: 36px;
+    --heading-size: 2.25rem;  /* 36px/16px */
+    --right-padding: 2rem; /* 20px/16px */
+    --left-width: 35%;
+    --right-width: calc(100% - var(--left-width));
 }
 
 body {
@@ -15,11 +19,11 @@ body {
     padding: 0;
 }
 
-div {
-    /* border: solid;
+/* div {
+    border: solid;
     border-color: red;
-    background-color: yellow; */
-}
+    background-color: yellow;
+} */
 
 .container {
     width: 100%;
@@ -29,11 +33,10 @@ div {
 }
 
 .left-panel {
-    /* background-color: var(--color-6); */
     background-image: url('bg-img.jpg');
     background-size: cover;
     background-position: center;
-    width: 35%;
+    width: var(--left-width);
     display: flex;
     flex-direction: column;
 }
@@ -49,7 +52,7 @@ div {
 }
 
 .logo-container {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .logo {
@@ -64,6 +67,78 @@ div {
 }
 
 .right-panel {
+    width: var(--right-width);
     flex-grow: 1;
     background-color: var(--color-bg);
+    display: flex;
+    justify-content: center; /* this will center the brand-panel vertically */
+    align-items: center; /* this will center the brand-panel horizontally */
+
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text {
+    padding-left: var(--right-padding);
+    padding-right: 30%;
+    word-wrap: break-word;
+}
+
+.inputs {
+    display: flex;
+}
+
+.right-form {
+    background-color: white;
+    padding-top: var(--right-padding);
+    padding-bottom: var(--right-padding);
+    padding-left: var(--right-padding);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.right-form > h3 {
+    margin: 0;
+    padding-bottom: var(--right-padding);
+}
+
+label {
+    margin-top: 5px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: var(--heading-bold);
+    font-size: xx-small;
+}
+
+input {
+    margin-bottom: 5px;
+    width: 150px;
+}
+
+.rights-inputs {
+    margin-left: var(--right-padding);
+}
+
+.bottom-text {
+    padding-left: var(--right-padding);
+}
+
+button {
+    margin-top: 30px;
+    background-color: var(--color-3);
+    color: white;
+    font-weight: var(--heading-bold);
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 0.5;
+}
+
+p > a {
+    text-decoration: none;
+    color: var(--color-3);
+    font-weight: var(--heading-bold);
 }
